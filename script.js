@@ -3,14 +3,14 @@ const searchInput = document.querySelector("#search-input");
 const definitionContainer = document.querySelector("#definition-container");
 const sourceSelect = document.querySelector("#source-select");
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
-import { API_KEY } from "./api-keys";
+// import { API_KEY } from "./api-keys";
 
 searchButton.addEventListener("click", function () {
     const word = searchInput.value;
     const source = sourceSelect.value;
 
     definitionContainer.innerHTML = "Loading...";
-    
+
     fetch(`https://api.dictionaryapi.dev/${source}/${word}?api_key=2efa2f86-ba82-4766-a79b-fd039838158a`)
     // fetch(`https://api.dictionaryapi.dev/${source}/${word}`)
         .then((response) => response.json())
